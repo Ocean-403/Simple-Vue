@@ -1,0 +1,25 @@
+<body>
+  <div id="app">
+    <p>名称: {{name}}</p>
+    <div v-text="name"></div>
+    <input type="text" v-model="name" />
+    <br />
+    <p>版本：{{info.version}}</p>
+    <div v-text="info.version"></div>
+    <input type="text" v-model="info.version" />
+  </div>
+</body>
+
+<script src="./vue.js"></script>
+
+<script>
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      name: "vue",
+      info: {
+        version: "2.0",
+      },
+    },
+  });
+</script>
